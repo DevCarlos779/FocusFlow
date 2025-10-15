@@ -7,6 +7,8 @@ export const HeaderContainer = styled.header`
     align-items: center;
     justify-content: space-between;
 
+    margin-bottom: 1rem;
+
 `;
 
 export const LogoContainer = styled.div`

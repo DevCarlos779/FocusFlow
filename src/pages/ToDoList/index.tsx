@@ -1,7 +1,8 @@
-import { Moon, Plus, Sun } from "phosphor-react";
-import { FooterContainer, ListContainer, ListTasksContainer, SearchTaskContainer } from "./styles";
+import { Moon, Sun } from "phosphor-react";
+import { ListContainer, ListTasksContainer, SearchTaskContainer } from "./styles";
 import { useState } from "react";
 import { Task } from "./components/Task";
+import { Footer } from "../../components/Footer";
 
 export function ToDoList() {
 
@@ -14,7 +15,6 @@ export function ToDoList() {
 
     return (
         <ListContainer>
-            <h1>To do list</h1>
             <SearchTaskContainer>
                 <input type="text" placeholder="Search Task"/>
                 <select name="tasks-selection" id="tasks-selection">
@@ -36,11 +36,8 @@ export function ToDoList() {
                 
             </ListTasksContainer>
            
-            <FooterContainer>
-                <button>
-                    <Plus size={32} />
-                </button>
-            </FooterContainer>
+           <Footer />
+            
         </ListContainer>
         
     )
