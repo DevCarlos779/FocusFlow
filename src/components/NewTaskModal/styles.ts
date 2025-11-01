@@ -14,7 +14,7 @@ export const Content = styled(Dialog.Content)`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 36rem;
+    min-width: 30rem;
     padding: 2.5rem 1.5rem;
     background-color: ${props => props.theme["black-500"]};
     color: ${props => props.theme["purple-500"]};

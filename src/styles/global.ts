@@ -8,13 +8,13 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background-color: ${props => props.theme["white-500"]};
+        background-color: ${props => props.theme["gray-800"]};
         color: ${props => props.theme["black-500"]};
     }
 
     :focus {
         outline: 0;
-        box-shadow: 0 0 0 1px ${props => props.theme["purple-500"]};
+        box-shadow: 0 0 0 1px ${props => props.theme["purple-400"]};
     }
 
     body, input, textarea, button {

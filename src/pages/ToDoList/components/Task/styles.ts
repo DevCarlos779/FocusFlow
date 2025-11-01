@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const TaskContainer = styled.div`
+interface TaskContainerProps {
+    statetask: "complete" | "incomplete"
+}
+
+export const TaskContainer = styled.div<TaskContainerProps>`
     width: 100%;
     max-width: 800px;
     padding: 1rem 0.5rem;
@@ -10,4 +14,14 @@ export const TaskContainer = styled.div`
     align-items: center;
     justify-content: flex-start;
     gap: 0.5rem;
+
+    input {
+        cursor: pointer;
+    }
+
+    strong {
+        text-decoration: ${props => props.statetask == "complete" ? "line-through" : "none"};
+    }
+
+    
 `;

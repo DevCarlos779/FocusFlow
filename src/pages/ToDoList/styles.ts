@@ -15,6 +15,7 @@ export const SearchTaskContainer = styled.div`
     gap: 1rem;
 
     input {
+        background-color: ${(props) => props.theme["gray-800"]};
         padding: 1rem;
         flex: 1;
         height: 2.5rem;
@@ -42,7 +43,14 @@ export const SearchTaskContainer = styled.div`
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        transition: background-color 0.2s;
     }
+
+    button:hover {
+        background-color: ${(props) => props.theme["purple-800"]};
+    }
+
+    
 `;
 
 export const ListTasksContainer = styled.div`

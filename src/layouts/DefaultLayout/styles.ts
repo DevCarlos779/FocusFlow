@@ -6,7 +6,7 @@ export const DefaultLayoutContainer = styled.div`
     margin: 5rem auto;
     padding: 2.5rem;
     
-    background-color: ${props => props.theme["black-500"]};
+    background-color: ${props => props.theme["gray-700"]};
     color: ${props => props.theme["purple-500"]};
     border-radius: 8px;
 

@@ -3,6 +3,7 @@ import { defaultTheme } from "./styles/themes/default";
 import { GlobalStyles } from "./styles/global";
 import { BrowserRouter } from "react-router-dom";
 import { Router } from "./Router";
+import { TasksContextProvider } from "./contexts/TasksContext";
 
 
 export function App() {
@@ -10,7 +11,9 @@ export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <BrowserRouter>
-        <Router />
+        <TasksContextProvider>
+          <Router />
+        </TasksContextProvider>
       </BrowserRouter>
       <GlobalStyles />
     </ThemeProvider>
