@@ -5,7 +5,7 @@ import { DefaultLayoutContainer } from "./styles";
 export function DefaultLayout() {
     return (
         <DefaultLayoutContainer>
-            <Header />
+            <Header /> 
             <Outlet />
         </DefaultLayoutContainer>
     )

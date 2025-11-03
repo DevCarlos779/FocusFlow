@@ -13,7 +13,7 @@ export function Header() {
             </LogoContainer>
 
             <NavLink to="/" title="To Do List">
-                <ClipboardText size={32} />
+                <ClipboardText size={32} className="LinkToDoList" />
             </NavLink>
         </HeaderContainer>
     )

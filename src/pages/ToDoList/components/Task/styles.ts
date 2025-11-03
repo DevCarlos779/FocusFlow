@@ -6,14 +6,31 @@ interface TaskContainerProps {
 
 export const TaskContainer = styled.div<TaskContainerProps>`
     width: 100%;
-    max-width: 800px;
     padding: 1rem 0.5rem;
-    border-bottom: 1px solid ${(props) => props.theme["purple-500"]};
+    font-size: 1.25rem;
+    color: ${props => props.theme["purple-700"]};
+    border-bottom: 1px solid ${props => props.theme["purple-700"]};
 
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 0.5rem;
+    justify-content: space-between;
+
+    .trash {
+        cursor: pointer;
+        transition: color 0.2s;
+
+        &:hover {
+            color: ${props => props.theme["purple-500"]};
+        }
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+    
 
     input {
         cursor: pointer;

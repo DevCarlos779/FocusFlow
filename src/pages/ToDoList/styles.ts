@@ -5,14 +5,22 @@ export const ListContainer = styled.main`
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    padding: 0 3rem;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 950px) {
+        padding: 0;
+    }
 `;
 
 export const SearchTaskContainer = styled.div`
     width: 100%;
-    max-width: 800px;
     display: flex;
     align-items: center;
+    flex-flow: row wrap;
     gap: 1rem;
+    padding: 2rem 3rem;
 
     input {
         background-color: ${(props) => props.theme["gray-800"]};
@@ -20,16 +28,18 @@ export const SearchTaskContainer = styled.div`
         flex: 1;
         height: 2.5rem;
         border-radius: 6px;
-        border: 2px solid ${(props) => props.theme["purple-500"]};
+        border: 2px solid ${props => props.theme["purple-700"]};
     }
 
     select {
         width: auto;
         height: 2.5rem;
         border-radius: 6px;
-        background-color: ${(props) => props.theme["purple-500"]};
+        background-color: ${props => props.theme["purple-700"]};
         border: 0;
         color: ${(props) => props.theme["white-500"]};
+        cursor: pointer;
+
     }
 
     button {
@@ -37,7 +47,7 @@ export const SearchTaskContainer = styled.div`
         height: 2.5rem;
         border-radius: 6px;
         border: 0;
-        background-color: ${(props) => props.theme["purple-500"]};
+        background-color: ${props => props.theme["purple-700"]};
         color: ${(props) => props.theme["white-500"]};
         display: flex;
         align-items: center;
@@ -47,7 +57,32 @@ export const SearchTaskContainer = styled.div`
     }
 
     button:hover {
-        background-color: ${(props) => props.theme["purple-800"]};
+        background-color: ${(props) => props.theme["purple-500"]};
+    }
+
+    @media (max-width: 950px) {
+        padding: 0;
+    }
+
+    @media (max-width: 800px) {
+        input {
+            flex: none;
+            width: 100%;
+        }
+
+        select, button {
+            width: 48%;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+
+        select, button {
+            width: 100%;
+            
+        }
+
     }
 
     
@@ -55,7 +90,7 @@ export const SearchTaskContainer = styled.div`
 
 export const ListTasksContainer = styled.div`
     width: 100%;
-    max-width: 800px;
+    padding: 0 3rem;
     height: 400px;
     max-height: 400px;
     overflow-y: auto;
@@ -63,5 +98,9 @@ export const ListTasksContainer = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+
+    @media (max-width: 950px) {
+        padding: 0;
+    }
 `;
 

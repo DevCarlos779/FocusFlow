@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { TaskContainer } from "./styles";
 import { TasksContext } from "../../../../contexts/TasksContext";
+import { Trash } from "phosphor-react";
 
 interface TaskProps {
     name: string;
@@ -8,6 +9,8 @@ interface TaskProps {
 }
 
 export function Task({ name, state }: TaskProps) {
+
+    const {deleteTask} = useContext(TasksContext);
 
     const isChecked = state == 'complete';
 
@@ -21,10 +24,18 @@ export function Task({ name, state }: TaskProps) {
         }
     }
 
+    function handleDeleteTask() {
+        deleteTask(name);
+    }
+
     return (
         <TaskContainer statetask={state}>
-            <input type="checkbox" name="stateTask" id="stateTask" defaultChecked={isChecked} onChange={modifyTaskState} />
-            <strong>{name}</strong>
+            <div>
+                <input type="checkbox" name="stateTask" id="stateTask" defaultChecked={isChecked} onChange={modifyTaskState} />
+                <strong>{name}</strong>
+            </div>
+
+            <Trash className="trash" size={24} onClick={handleDeleteTask} />
         </TaskContainer>
     )
 }

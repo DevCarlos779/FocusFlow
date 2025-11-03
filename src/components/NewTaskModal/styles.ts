@@ -17,7 +17,7 @@ export const Content = styled(Dialog.Content)`
     min-width: 30rem;
     padding: 2.5rem 1.5rem;
     background-color: ${props => props.theme["black-500"]};
-    color: ${props => props.theme["purple-500"]};
+    color: ${props => props.theme["purple-700"]};
 
     display: flex;
     flex-direction: column;
@@ -37,26 +37,38 @@ export const Content = styled(Dialog.Content)`
         input {
             width: 100%;
             padding: 0.5rem;
-            border: 0;
+            border: 1px solid ${props => props.theme["purple-700"]};;
             border-radius: 6px;
+            background-color: ${(props) => props.theme["gray-800"]};
         }
 
         button[type="submit"] {
             width: 100%;
-            background-color: ${props => props.theme["purple-500"]};
+            background-color: ${props => props.theme["purple-700"]};
             color: ${props => props.theme["white-500"]};
             font-weight: bold;
             padding: 1rem;
             border: 0;
             border-radius: 6px;
             cursor: pointer;
-            transition: background-color 0.4s, color 0.4s;
+            transition: background-color 0.4s;
 
             &:hover {
-                background-color: ${props => props.theme["white-500"]};
-                color: ${props => props.theme["purple-500"]};
+                background-color: ${props => props.theme["purple-500"]};
             }
         }
+    }
+
+    @media (max-width: 600px) {
+
+        min-width: 20rem;
+
+    }
+
+    @media (max-width: 360px) {
+
+        min-width: 17rem;
+
     }
 `;
 

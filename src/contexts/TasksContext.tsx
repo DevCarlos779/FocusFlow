@@ -13,6 +13,7 @@ interface TasksContextProps {
     updateTaskState: (taskForModify: Task) => void;
     filterTaskForState: (state: 'complete' | 'incomplete') => void;
     filterTaskForName: (name: string) => void;
+    deleteTask: (name: string) => void;
     
 }
 
@@ -26,9 +27,25 @@ export function TasksContextProvider({children}: TasksContextProviderProps) {
 
     const [tasks, setTasks] = useState<Task[]>([]);
     const [filteredTasks, setFilteredTasks] = useState<Task[]>([]);
+    const [actualFilteredTasksState, setActualFilteredTasksState] = useState<"all" |"complete" | "incomplete">("all");
 
-    function updateTasks(task: Task) {
-        setTasks(state => [task, ...state]);
+    function updateTasks(NewTask: Task) {
+        const taskWithSameName = tasks.filter(task => task.name == NewTask.name);
+
+        if(taskWithSameName.length != 0) {
+            alert("Você já tem uma task com esse nome!");
+        } else if(actualFilteredTasksState == "incomplete") {
+            setTasks(state => [NewTask, ...state]);
+            setFilteredTasks(state => [NewTask, ...state]);
+        } else {
+            setTasks(state => [NewTask, ...state]);
+        }
+        
+    }
+
+    function deleteTask(name: string) {
+        setTasks((prevTasks) => prevTasks.filter((task) => task.name !== name));
+        setFilteredTasks((prevTasks) => prevTasks.filter((task) => task.name !== name));
     }
 
     function updateTaskState(taskForModify: Task) {
@@ -42,11 +59,17 @@ export function TasksContextProvider({children}: TasksContextProviderProps) {
             
             })
         );
+
+        setFilteredTasks((prevTasks) => prevTasks.filter((task) => task.name !== taskForModify.name));
+
+
     }
 
     function filterTaskForState(state: 'complete' | 'incomplete') {
+        console.log(state);
         const filtered = tasks.filter(task => task.state == state);
 
+        setActualFilteredTasksState(state);
         setFilteredTasks(filtered);
 
     }
@@ -65,7 +88,7 @@ export function TasksContextProvider({children}: TasksContextProviderProps) {
     }
 
     return (
-        <TasksContext.Provider value={{tasks, filteredTasks, updateTasks, updateTaskState, filterTaskForState, filterTaskForName}}>
+        <TasksContext.Provider value={{tasks, filteredTasks, updateTasks, updateTaskState, filterTaskForState, filterTaskForName, deleteTask}}>
             {children}
         </TasksContext.Provider>
     )

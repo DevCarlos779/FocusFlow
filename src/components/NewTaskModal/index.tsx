@@ -31,7 +31,7 @@ export function NewTaskModal() {
     })
 
     function createNewTask(task: CreateNewTaskInputs) {
-
+        
         updateTasks({name: task.name, state:"incomplete"});
 
         reset();
