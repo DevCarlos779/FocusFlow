@@ -8,6 +8,7 @@ export const ListContainer = styled.main`
     padding: 0 3rem;
     width: 100%;
     height: 100%;
+    padding-top: 2rem;
 
     @media (max-width: 950px) {
         padding: 0;
@@ -23,7 +24,7 @@ export const SearchTaskContainer = styled.div`
     padding: 2rem 3rem;
 
     input {
-        background-color: ${(props) => props.theme["gray-800"]};
+        background-color: ${(props) => props.theme["body-background-color"]};
         padding: 1rem;
         flex: 1;
         height: 2.5rem;
@@ -37,7 +38,7 @@ export const SearchTaskContainer = styled.div`
         border-radius: 6px;
         background-color: ${props => props.theme["purple-700"]};
         border: 0;
-        color: ${(props) => props.theme["white-500"]};
+        color: ${(props) => props.theme["buttons-text-color"]};
         cursor: pointer;
 
     }
@@ -48,7 +49,7 @@ export const SearchTaskContainer = styled.div`
         border-radius: 6px;
         border: 0;
         background-color: ${props => props.theme["purple-700"]};
-        color: ${(props) => props.theme["white-500"]};
+        color: ${(props) => props.theme["buttons-text-color"]};
         display: flex;
         align-items: center;
         justify-content: center;

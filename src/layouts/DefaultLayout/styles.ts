@@ -6,8 +6,7 @@ export const DefaultLayoutContainer = styled.div`
     margin: 5rem auto;
     padding: 3rem 4rem;
     
-    background-color: ${props => props.theme["gray-700"]};
-    color: ${props => props.theme["purple-500"]};
+    background-color: ${props => props.theme["layout-background-color"]};
     border-radius: 8px;
 
     display: flex;
@@ -15,13 +14,11 @@ export const DefaultLayoutContainer = styled.div`
     align-items: center;
 
 
-    @media (max-width: 550px) {
+    @media (max-width: 600px) {
         height: 100%;
         margin: 0;
         border-radius: 0;
+        padding: 3rem 2rem;
     }
-
-
-    
 
 `;

@@ -37,6 +37,7 @@ export const TaskContainer = styled.div<TaskContainerProps>`
     }
 
     strong {
+        opacity: ${props => props.statetask == "complete" ? 1 : 0.75};
         text-decoration: ${props => props.statetask == "complete" ? "line-through" : "none"};
     }
 

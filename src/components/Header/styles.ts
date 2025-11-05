@@ -6,15 +6,10 @@ export const HeaderContainer = styled.header`
     align-items: center;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding-bottom: 2rem;
 
     margin-bottom: 1rem;
 
     color: ${props => props.theme["purple-700"]};
-
-    .LinkToDoList {
-        color: ${props => props.theme["purple-700"]};
-    }
 
     @media (max-width: 600px) {
         gap: 1rem;
@@ -59,4 +54,22 @@ export const LogoContainer = styled.div`
 
     }
     
+`;
+
+export const NavIconsConteiner = styled.div`
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    .LinkToDoList {
+        color: ${props => props.theme["purple-700"]};
+        cursor: pointer;
+
+        &:hover {
+            color: ${props => props.theme["purple-500"]};
+        }
+    }
+
 `;

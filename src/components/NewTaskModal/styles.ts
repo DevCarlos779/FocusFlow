@@ -16,7 +16,7 @@ export const Content = styled(Dialog.Content)`
     transform: translate(-50%, -50%);
     min-width: 30rem;
     padding: 2.5rem 1.5rem;
-    background-color: ${props => props.theme["black-500"]};
+    background-color: ${props => props.theme["background-modal"]};
     color: ${props => props.theme["purple-700"]};
 
     display: flex;
@@ -39,13 +39,13 @@ export const Content = styled(Dialog.Content)`
             padding: 0.5rem;
             border: 1px solid ${props => props.theme["purple-700"]};;
             border-radius: 6px;
-            background-color: ${(props) => props.theme["gray-800"]};
+            background-color: ${(props) => props.theme["body-background-color"]};
         }
 
         button[type="submit"] {
             width: 100%;
             background-color: ${props => props.theme["purple-700"]};
-            color: ${props => props.theme["white-500"]};
+            color: ${props => props.theme["buttons-text-color"]};
             font-weight: bold;
             padding: 1rem;
             border: 0;

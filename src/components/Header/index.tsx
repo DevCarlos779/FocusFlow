@@ -1,6 +1,6 @@
-import { ClipboardText } from "phosphor-react";
+import { Alarm, ClipboardText } from "phosphor-react";
 import { NavLink } from "react-router-dom";
-import { HeaderContainer, LogoContainer } from "./styles";
+import { HeaderContainer, LogoContainer, NavIconsConteiner } from "./styles";
 import Logo from "../../assets/Logo_FocusFlow.png"
 
 
@@ -12,9 +12,17 @@ export function Header() {
                 <h1>Focus Flow</h1>
             </LogoContainer>
 
-            <NavLink to="/" title="To Do List">
-                <ClipboardText size={32} className="LinkToDoList" />
-            </NavLink>
+            <NavIconsConteiner>
+                <NavLink to="/" title="To Do List">
+                    <ClipboardText size={32} className="LinkToDoList" />
+                </NavLink>
+
+                <NavLink to="/timer" title="To Do List">
+                    <Alarm size={32} className="LinkToDoList" />
+                </NavLink>
+            </NavIconsConteiner>
+            
+            
         </HeaderContainer>
     )
 }

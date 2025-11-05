@@ -19,7 +19,7 @@ export const CreateNewTaskButton = styled.button`
         border-radius: 50%;
         border: 0;
         background-color: ${props => props.theme["purple-700"]};
-        color: ${(props) => props.theme["white-500"]};
+        color: ${(props) => props.theme["buttons-text-color"]};
         display: flex;
         align-items: center;
         justify-content: center;
