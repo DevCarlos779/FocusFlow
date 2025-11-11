@@ -18,9 +18,11 @@ export function ToDoList() {
 
     const [themeDark, setThemeDark] = useState(true)
     const [isFiltered, setIsFiltered] = useState(false)
+    const [valueInputSearch, setValueInputSearch] = useState("")
     const [stateTasksFiltered, setStateTasksFiltered] = useState<"all" | "complete" | "incomplete">("all");
 
     function filterTasksName(e: React.ChangeEvent<HTMLInputElement>) {
+        setValueInputSearch(e.target.value)
         
         if(e.target.value != "") {
             filterTaskForName(e.target.value);
@@ -33,6 +35,7 @@ export function ToDoList() {
     }
 
     useEffect(() => {
+        setValueInputSearch("")
         if(stateTasksFiltered != "all") {
             filterTaskForState(stateTasksFiltered);
             setIsFiltered(true);
@@ -62,7 +65,7 @@ export function ToDoList() {
     return (
         <ListContainer>
             <SearchTaskContainer>
-                <input type="text" placeholder="Search Task" onChange={filterTasksName}/>
+                <input type="text" placeholder="Search Task" value={valueInputSearch} onChange={filterTasksName}/>
                 <select name="tasks-selection" id="tasks-selection" onChange={(e) => setStateTasksFiltered(e.target.value as "incomplete" | "complete" | "all")}>
                     <option value="all">All</option>
                     <option value="complete">Completes</option>

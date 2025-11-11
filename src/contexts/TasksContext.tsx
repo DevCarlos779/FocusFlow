@@ -87,6 +87,8 @@ export function TasksContextProvider({children}: TasksContextProviderProps) {
 
     }
 
+    
+
     return (
         <TasksContext.Provider value={{tasks, filteredTasks, updateTasks, updateTaskState, filterTaskForState, filterTaskForName, deleteTask}}>
             {children}

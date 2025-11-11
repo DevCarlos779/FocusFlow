@@ -4,7 +4,6 @@ import { differenceInSeconds } from "date-fns";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import z from "zod";
-import { is } from "zod/v4/locales";
 import { HandPalm, Pause, Play } from "phosphor-react";
 
 const NewCycleTimerSchema = z.object({
