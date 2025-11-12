@@ -7,9 +7,13 @@ export const HeaderContainer = styled.header`
     flex-flow: row wrap;
     justify-content: space-between;
 
-    margin-bottom: 1rem;
 
     color: ${props => props.theme["purple-700"]};
+
+    @media (max-width: 950px) {
+        margin-bottom: 3rem;
+
+    }
 
     @media (max-width: 600px) {
         gap: 1rem;
@@ -71,5 +75,23 @@ export const NavIconsConteiner = styled.div`
             color: ${props => props.theme["purple-500"]};
         }
     }
+
+    button {
+        padding: 0.2rem;
+        border-radius: 6px;
+        border: 0;
+        background-color: ${props => props.theme["purple-700"]};
+        color: ${(props) => props.theme["buttons-text-color"]};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    button:hover {
+        background-color: ${(props) => props.theme["purple-500"]};
+    }
+
 
 `;

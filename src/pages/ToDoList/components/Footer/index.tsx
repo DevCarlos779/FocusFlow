@@ -1,7 +1,7 @@
 import { Plus } from "phosphor-react";
 import { CreateNewTaskButton, FooterContainer } from "./styles";
 import * as Dialog from "@radix-ui/react-dialog";
-import { NewTaskModal } from "../NewTaskModal";
+import { NewTaskModal } from "../../../../components/NewTaskModal";
 
 export function Footer() {
     return (

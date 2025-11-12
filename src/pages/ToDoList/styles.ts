@@ -40,46 +40,25 @@ export const SearchTaskContainer = styled.div`
         border: 0;
         color: ${(props) => props.theme["buttons-text-color"]};
         cursor: pointer;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
     }
 
-    button {
-        width: 2.5rem;
-        height: 2.5rem;
-        border-radius: 6px;
-        border: 0;
-        background-color: ${props => props.theme["purple-700"]};
-        color: ${(props) => props.theme["buttons-text-color"]};
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: background-color 0.2s;
-    }
-
-    button:hover {
-        background-color: ${(props) => props.theme["purple-500"]};
+    option {
+        white-space: nowrap;
     }
 
     @media (max-width: 950px) {
         padding: 0;
     }
 
-    @media (max-width: 800px) {
-        input {
-            flex: none;
-            width: 100%;
-        }
 
-        select, button {
-            width: 48%;
-        }
+    @media (max-width: 450px) {
 
-    }
-
-    @media (max-width: 600px) {
-
-        select, button {
+        select {
             width: 100%;
             
         }

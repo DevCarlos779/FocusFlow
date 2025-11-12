@@ -3,9 +3,11 @@ import styled from "styled-components";
 export const FooterContainer = styled.footer`
     margin-top: 1rem;
     width: 100%;
-    padding: 0 3rem;
+    padding: 2rem 3rem;
+    position: relative;
     display: flex;
-    align-items: center;
+    flex: 1;
+    align-items: flex-end;
     justify-content: flex-end;
 
     @media (max-width: 950px) {
