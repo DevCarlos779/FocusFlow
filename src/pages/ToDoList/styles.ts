@@ -74,16 +74,29 @@ export const ListTasksContainer = styled.div`
     width: 100%;
     padding: 0 3rem;
     max-height: 400px;
-    max-height: 400px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    flex: 1;
 
     @media (max-width: 950px) {
         padding: 0;
     }
+
+    @media (max-height: 800px) {
+        max-height: 250px;
+    }
+
+    @media (max-height: 700px) {
+        max-height: 150px;
+    }
+
+    @media (max-height: 600px) {
+        max-height: 100px;
+    }
+
 
 
 `;
