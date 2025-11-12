@@ -17,7 +17,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    max-height: 100dvh;
   }
 
   :focus {
