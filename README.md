@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+🌌 Focus Flow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O Focus Flow é uma aplicação web desenvolvida para ajudar na organização de tarefas e no gerenciamento do tempo, unindo produtividade e foco em um único lugar.
 
-Currently, two official plugins are available:
+✨ Funcionalidades
+📝 Lista de Tarefas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Adicione novas tarefas facilmente.
 
-## React Compiler
+Marque tarefas como concluídas ou incompletas.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Exclua tarefas quando desejar.
 
-## Expanding the ESLint configuration
+Pesquise tarefas pelo nome com a barra de busca (Search Task).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Filtre tarefas por:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+✅ Completas
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+❌ Incompletas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📋 Todas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+⏳ Timer de Foco
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Configure um tempo personalizado para focar em uma atividade.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Inicie, pause ou resete o cronômetro a qualquer momento.
+
+Ideal para técnicas de produtividade como o Pomodoro.
+
+🧩 Tecnologias Utilizadas
+
+React.js ⚛️
+
+TypeScript
+
+Styled-Components
+
+Vite
+
+HTML5 & CSS3
+
+💡 Objetivo
+
+O Focus Flow foi criado com o propósito de unir gestão de tarefas e controle de tempo em uma interface simples, moderna e intuitiva — perfeita para quem busca aumentar a produtividade e manter o foco durante o dia.

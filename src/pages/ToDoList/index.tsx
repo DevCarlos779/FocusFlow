@@ -59,6 +59,7 @@ export function ToDoList() {
 
     return (
         <ListContainer>
+            
             <SearchTaskContainer>
                 <input type="text" placeholder="Search Task" value={valueInputSearch} onChange={filterTasksName}/>
                 <select name="tasks-selection" id="tasks-selection" onChange={(e) => setStateTasksFiltered(e.target.value as "incomplete" | "complete" | "all")}>
