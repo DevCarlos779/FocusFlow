@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ListContainer = styled.main`
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,7 +72,7 @@ export const SearchTaskContainer = styled.div`
 export const ListTasksContainer = styled.div`
     width: 100%;
     padding: 0 3rem;
-    height: 400px;
+    max-height: 400px;
     max-height: 400px;
     overflow-y: auto;
     display: flex;
@@ -79,8 +80,6 @@ export const ListTasksContainer = styled.div`
     align-items: center;
     gap: 1rem;
 
-    @media (max-width: 950px) {
-        padding: 0;
-    }
+
 `;
 

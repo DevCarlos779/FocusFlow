@@ -10,10 +10,6 @@ export const FooterContainer = styled.footer`
     align-items: flex-end;
     justify-content: flex-end;
 
-    @media (max-width: 950px) {
-        padding: 0;
-    }
-
 `;
 
 export const CreateNewTaskButton = styled.button`
