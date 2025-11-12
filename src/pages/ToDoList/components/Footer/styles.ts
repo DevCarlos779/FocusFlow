@@ -1,17 +1,20 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
-    margin-top: 1rem;
-    width: 100%;
-    padding: 2rem 3rem;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    z-index: 10;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: ${(props) => props.theme["purple-700"]};
+    color: ${(props) => props.theme["buttons-text-color"]};
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
     
-    @media (max-width: 950px) {
-        padding: 1rem 0 2rem;
-    }
+
 
 `;
 

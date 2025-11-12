@@ -6,14 +6,14 @@ export const ListContainer = styled.main`
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    max-height: 100vh;
-    padding: 0 3rem;
+    height: 100vh;
     width: 100%;
-    height: 100%;
-    padding-top: 2rem;
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+    overflow: hidden;
 
     @media (max-width: 950px) {
-        padding: 0;
+        padding: 1rem;
     }
 `;
 
@@ -23,7 +23,7 @@ export const SearchTaskContainer = styled.div`
     align-items: center;
     flex-flow: row wrap;
     gap: 1rem;
-    padding: 2rem 3rem;
+    padding: 1rem 0;
 
     input {
         background-color: ${(props) => props.theme["body-background-color"]};
@@ -31,14 +31,14 @@ export const SearchTaskContainer = styled.div`
         flex: 1;
         height: 2.5rem;
         border-radius: 6px;
-        border: 2px solid ${props => props.theme["purple-700"]};
+        border: 2px solid ${(props) => props.theme["purple-700"]};
     }
 
     select {
         width: auto;
         height: 2.5rem;
         border-radius: 6px;
-        background-color: ${props => props.theme["purple-700"]};
+        background-color: ${(props) => props.theme["purple-700"]};
         border: 0;
         color: ${(props) => props.theme["buttons-text-color"]};
         cursor: pointer;
@@ -46,7 +46,6 @@ export const SearchTaskContainer = styled.div`
         box-sizing: border-box;
         overflow: hidden;
         text-overflow: ellipsis;
-
     }
 
     option {
@@ -54,62 +53,24 @@ export const SearchTaskContainer = styled.div`
     }
 
     @media (max-width: 950px) {
-        padding: 0;
+        padding: 0.5rem 0;
     }
-
 
     @media (max-width: 450px) {
-
         select {
             width: 100%;
-            
         }
-
     }
-
-    
 `;
 
 export const ListTasksContainer = styled.div`
     width: 100%;
-    padding: 0 3rem;
-    max-height: 400px;
+    flex: 1;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    flex: 1;
-
-    @media (max-width: 950px) {
-        padding: 0;
-    }
-
-    @media (max-height: 800px) {
-        max-height: 300px;
-    }
-
-    @media (max-height: 750px) {
-        max-height: 280px;
-    }
-
-    @media (max-height: 700px) {
-        max-height: 250px;
-    }
-
-    @media (max-height: 680px) {
-        max-height: 220px;
-    }
-
-    @media (max-height: 650px) {
-        max-height: 200px;
-    }
-
-    @media (max-height: 600px) {
-        max-height: 100px;
-    }
-
-
+    margin-bottom: 4rem;
 
 `;
-
