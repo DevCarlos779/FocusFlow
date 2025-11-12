@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const DefaultLayoutContainer = styled.div`
     max-width: 74rem;
-    max-height: 100dvh;
     height: calc(100dvh - 10rem);
     margin: 5rem auto;
     padding: 3rem 4rem;

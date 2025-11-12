@@ -13,8 +13,7 @@ export const FooterContainer = styled.footer`
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    
-
+    transition: transform 0.2s ease;
 
 `;
 
