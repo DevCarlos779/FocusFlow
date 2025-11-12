@@ -11,7 +11,7 @@ export const FooterContainer = styled.footer`
     justify-content: flex-end;
     
     @media (max-width: 950px) {
-        padding: 0;
+        padding: 2rem 0;
     }
 
 `;
