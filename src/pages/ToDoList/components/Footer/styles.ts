@@ -9,6 +9,10 @@ export const FooterContainer = styled.footer`
     flex: 1;
     align-items: flex-end;
     justify-content: flex-end;
+    
+    @media (max-width: 950px) {
+        padding: 0;
+    }
 
 `;
 

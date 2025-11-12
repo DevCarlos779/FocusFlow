@@ -80,6 +80,10 @@ export const ListTasksContainer = styled.div`
     align-items: center;
     gap: 1rem;
 
+    @media (max-width: 950px) {
+        padding: 0;
+    }
+
 
 `;
 
