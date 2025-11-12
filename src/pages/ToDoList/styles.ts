@@ -86,10 +86,18 @@ export const ListTasksContainer = styled.div`
     }
 
     @media (max-height: 800px) {
+        max-height: 300px;
+    }
+
+    @media (max-height: 750px) {
         max-height: 250px;
     }
 
     @media (max-height: 700px) {
+        max-height: 200px;
+    }
+
+    @media (max-height: 650px) {
         max-height: 150px;
     }
 
