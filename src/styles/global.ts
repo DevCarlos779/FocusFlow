@@ -34,7 +34,7 @@ export const GlobalStyles = createGlobalStyle`
 
   @media (max-width: 600px) {
     body {
-      max-height: 100vh;
+      max-height: 100dvh;
       padding: 0;
     }
   }

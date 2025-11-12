@@ -6,6 +6,7 @@ export const TimerContainer = styled.form`
     align-items: center;
     justify-content: space-around;
     padding: 0 3rem;
+    max-height: 100dvh;
     width: 100%;
     height: 100%;
 
