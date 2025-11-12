@@ -3,6 +3,7 @@
 O Focus Flow é uma aplicação web desenvolvida para ajudar na organização de tarefas e no gerenciamento do tempo, unindo produtividade e foco em um único lugar.
 
 ✨ Funcionalidades
+
 📝 Lista de Tarefas
 
 Adicione novas tarefas facilmente.
@@ -20,6 +21,7 @@ Filtre tarefas por:
 ❌ Incompletas
 
 📋 Todas
+
 
 ⏳ Timer de Foco
 
